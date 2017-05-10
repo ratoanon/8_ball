@@ -18,6 +18,17 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Camera.cpp" />
+    <ClCompile Include="..\Game.cpp" />
+    <ClCompile Include="..\main.cpp" />
+    <ClCompile Include="..\Table.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Camera.h" />
+    <ClInclude Include="..\Game.h" />
+    <ClInclude Include="..\Table.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{EE6D219E-01A7-4DCD-AC32-26152D3C5A62}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
