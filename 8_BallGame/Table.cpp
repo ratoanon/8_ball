@@ -13,7 +13,7 @@ namespace mygame {
 		glColor3f(0.0f, 0.5f, 0.0f);
 		glVertex3f(posX + width / 2, posY - height / 2, posZ);
 		glVertex3f(posX + width / 2, posY + height / 2, posZ);
-		glVertex3f(posX - width / 2, posY  + height / 2, posZ);
+		glVertex3f(posX - width / 2, posY + height / 2, posZ);
 		glVertex3f(posX - width / 2, posY - height / 2, posZ);
 		glEnd();
 	}

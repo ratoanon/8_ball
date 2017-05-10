@@ -6,9 +6,15 @@ using namespace gameengine;
 using namespace mygame;
 using namespace std;
 
+vector<Table> tables;
+
 void drawSceneGame1(void) {
 	glPushMatrix();
-	
+	Table table(0.0f, 0.0f, 0.0f, 5.0f, 10.0f);
+	tables.push_back(table);
+
+
+
 	glPopMatrix();
 }
 
@@ -33,7 +39,6 @@ void Game1::gameSetWindowCallbacks(int windowID) {
 		currentWindow->camera.cameraUpdate();
 
 		drawSceneGame1();
-
 		glutSwapBuffers();
 	});
 
