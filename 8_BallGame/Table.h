@@ -10,12 +10,13 @@ namespace mygame {
 			std::cout << "Cria Snowman!\n";
 		}
 		~Table() { std::cout << "Destroi Snowman!\n"; }
-		void draw();
+		void draw(DrawType drawType);
 		//void move(float dx, float dy, float dz);
 		void drawField();
+		void drawBoards();
 
 	private:
-		float posX, posY, posZ; 
-		float width, height; 
+		float posX, posY, posZ;
+		float width, height;
 	};
 }
