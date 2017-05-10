@@ -1,8 +1,8 @@
 ﻿  Table.cpp
-c:\users\snowydawolf\8balls\8_ballgame\table.cpp(12): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+  MainWindow.cpp
   main.cpp
   Game.cpp
   Camera.cpp
   Generating Code...
-  8_BallGame.vcxproj -> C:\Users\Snowydawolf\8BALLS\8_BallGame\x64\Debug\8_BallGame.exe
-  8_BallGame.vcxproj -> C:\Users\Snowydawolf\8BALLS\8_BallGame\x64\Debug\8_BallGame.pdb (Full PDB)
+  8_BallGame.vcxproj -> C:\Users\VHCM\OneDrive\GitHubBilhar\8_ball\8_BallGame\x64\Debug\8_BallGame.exe
+  8_BallGame.vcxproj -> C:\Users\VHCM\OneDrive\GitHubBilhar\8_ball\8_BallGame\x64\Debug\8_BallGame.pdb (Full PDB)

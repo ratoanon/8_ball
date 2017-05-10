@@ -4,13 +4,10 @@
 
 namespace gameengine {
 
-	Camera::Camera(float targetX, float targetY, float targetZ) {
+	Camera::Camera() {
 		eyex = 0.0; eyey = 0.0; eyez = 0.0;
-		//dirx = 0.0; diry = 0.0; dirz = -1.0;
+		dirx = 0.0; diry = 0.0; dirz = -1.0;
 		upx = 0.0; upy = 1.0; upz = 0.0;
-		this->targetX = targetX;
-		this->targetY = targetY;
-		this->targetZ = targetZ;
 
 		anglePan = 0.0; deltaAnglePan = 0.0;
 		angleTilt = 0.0; deltaAngleTilt = 0.0;
@@ -18,6 +15,8 @@ namespace gameengine {
 		speed = 0.1;
 		deltaSpeed = 0.0;
 		deltaMove = 0.0;
+
+		std::cout << "[Camera] Create Camera" << std::endl;
 	}
 
 	Camera::~Camera() {
@@ -41,7 +40,7 @@ namespace gameengine {
 		// Assim, o produto vetorial será calculado por: n = PoPx(1,0,0) x PoPy(0,0,1)
 		// n = |PoPx| * |PoPy| * sen(Teta) = (0,1,0)
 		// O ângulo entre um vetor (dx,dy,dz) e a normal (0,1,0) é calculado por:
-		// alpha = asen(abs(0*dx+1*dy+0*dz)/(abs(sqrt(0*0+1*1+0*0))*abs(dx*dx+dY*dy+dz*dz)))
+		// alpha = asen((0*dx+1*dy+0*dz)/(sqrt(0*0+1*1+0*0)*(dx*dx+dY*dy+dz*dz))
 		angleTilt = asin(fabs(0.0 * dirx + 1.0 * diry + 0.0 * dirz) / (fabs(sqrt(0.0 * 0.0 + 1.0 * 1.0 + 0.0 * 0.0))*fabs(dirx*dirx + diry*diry + dirz*dirz)));
 		angleTilt = angleTilt * 180.0 / 3.14159265359;
 		std::cout << "angleTilt=" << angleTilt << '\n';
@@ -86,7 +85,7 @@ namespace gameengine {
 		glLoadIdentity();
 
 		gluLookAt(eyex, eyey, eyez,					// eye
-			targetX, targetY, targetZ,				// center
+			eyex + dirx, eyey + diry, eyez + dirz,	// center
 			upx, upy, upz);							// up
 	}
 }

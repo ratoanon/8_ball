@@ -1,39 +1,28 @@
-#include <iostream>
-#include <vector>
-#include <gl/freeglut.h>
-#include "Game.h"
-#include "Table.h"
+/***********************************PROGRAMA-BASE********************************/
+/* Descrição:																	*/
+/* Programa base de aplicação OpenGL/freeglut em C++.							*/
+/********************************************************************************/
 
-using namespace gameengine;
-using namespace mygame;
-using namespace std;
-
-vector<Table> gameCharacters;
-
-void createGameCharacters()
-{
-	Table table(0.0f, 0.0f, 0.0f, 5.0f, 10.0f);
-
-	gameCharacters.push_back(table);
-}
-
-void Game::drawScene(void)
-{
-	for (vector<Table>::iterator it = gameCharacters.begin(); it != gameCharacters.end();	it++) {
-		glPushMatrix();
-		it->draw(mygame::Table::DrawType::Wire);
-		//it->move(0.0001f, 0.0f, 0.0001f);
-		glPopMatrix();
-	}
-}
+#include "Game1.h"
 
 int main(int argc, char **argv) {
-	Game game;
-	//Camera camera(0.0f, 0.0f, 0.0f);
+	Game1 game;
+	int wId = game.gameAddMainWindow(0, 0, 800, 600, "Main Window 1");
+	game.gameCameraSetPosition(wId, 0.0, 0.0, 2.0, 0.0, 0.0, 1.0, 0.0, 1.0, 0.0);
+	game.gameSetWindowCallbacks(wId);
 
-	createGameCharacters();
+	// Esta função é geral para o freeglut
+	/*glutIdleFunc([](void) {
+	// Colocar aqui o código que se pretenda executar sempre que não existires outros eventos
+	});*/
 
-	game.init(0, 0, 600, 600);
-	game.run();
+	// Definir o FPS (É comum a todas as janelas)
+	Game::gameSetTimerFPS(100);
+	// Inicia o lançamento de eventos de display, para cada janela, de acordo com o FPS definido
+	Game::gameTimerRun(wId);
+
+	// Entra no ciclo de gestão da aplicação por eventos
+	Game::gameRun();
+
 	return 0;
 }

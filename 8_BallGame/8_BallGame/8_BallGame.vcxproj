@@ -22,11 +22,14 @@
     <ClCompile Include="..\Camera.cpp" />
     <ClCompile Include="..\Game.cpp" />
     <ClCompile Include="..\main.cpp" />
+    <ClCompile Include="..\MainWindow.cpp" />
     <ClCompile Include="..\Table.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Camera.h" />
     <ClInclude Include="..\Game.h" />
+    <ClInclude Include="..\Game1.h" />
+    <ClInclude Include="..\MainWindow.h" />
     <ClInclude Include="..\Table.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

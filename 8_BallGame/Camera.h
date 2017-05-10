@@ -4,7 +4,7 @@ namespace gameengine {
 
 	class Camera {
 	public:
-		Camera(float targetX, float targetY, float targetZ);
+		Camera();
 		~Camera();
 		void cameraSetPosition(double eyex, double eyey, double eyez,
 			double dirx, double diry, double dirz,
@@ -18,7 +18,6 @@ namespace gameengine {
 		double eyex, eyey, eyez;	// Posição da câmara (centro-de-massa)
 		double dirx, diry, dirz;	// Vector do sentido de deslocamento da câmara
 		double upx, upy, upz;		// Vector que indica a parte superior da câmara
-		float targetX, targetY, targetZ;
 
 		double anglePan, angleTilt;	// Ângulos de Pan e Tilt
 		double deltaAnglePan, deltaAngleTilt;
