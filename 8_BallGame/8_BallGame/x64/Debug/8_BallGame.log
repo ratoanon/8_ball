@@ -1,5 +1,5 @@
 ﻿  SnowMan.cpp
-  main.cpp
-  Generating Code...
-  8_BallGame.vcxproj -> C:\Users\Snowydawolf\8BALLS\8_BallGame\x64\Debug\8_BallGame.exe
-  8_BallGame.vcxproj -> C:\Users\Snowydawolf\8BALLS\8_BallGame\x64\Debug\8_BallGame.pdb (Full PDB)
+c:\users\daxtr\onedrive\documentos\github\8_ball\8_ballgame\snowman.cpp(9): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+c:\users\daxtr\onedrive\documentos\github\8_ball\8_ballgame\snowman.cpp(34): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+  8_BallGame.vcxproj -> C:\Users\Daxtr\OneDrive\Documentos\GitHub\8_ball\8_BallGame\x64\Debug\8_BallGame.exe
+  8_BallGame.vcxproj -> C:\Users\Daxtr\OneDrive\Documentos\GitHub\8_ball\8_BallGame\x64\Debug\8_BallGame.pdb (Full PDB)
