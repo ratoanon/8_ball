@@ -41,7 +41,7 @@ namespace gameengine {
 		return window.windowId;
 	}
 
-	void Game::gameCameraSetPosition(int wId,
+	void Game::gameCameraSetPosition(int wId, 
 		double eyex, double eyey, double eyez,
 		double dirx, double diry, double dirz,
 		double upx, double upy, double upz) {
@@ -57,7 +57,7 @@ namespace gameengine {
 	}
 
 	void Game::gameTimerRun(int value) { // Como valor identificador do timer, foi passado o ID da janela
-										 //glutPostRedisplay(); // Lança evento de Display na janela que está ativa
+		//glutPostRedisplay(); // Lança evento de Display na janela que está ativa
 		glutPostWindowRedisplay(value); // ID da janela a que se pretende lançar novo evento de Display
 		glutTimerFunc((1000 / gameFPS) /*ms*/, gameTimerRun, value); // Estamos a passar como valor identificador do timer, o ID da janela
 	}

@@ -21,7 +21,7 @@ namespace gameengine {
 
 		double anglePan, angleTilt;	// Ângulos de Pan e Tilt
 		double deltaAnglePan, deltaAngleTilt;
-
+		
 		double deltaMove;			// Move para a frente e para trás
 		double deltaSpeed;			// Aumenta ou diminui a velocidade
 		double speed;				// Constante de velocidade de deslocamento

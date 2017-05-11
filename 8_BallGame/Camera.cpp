@@ -29,7 +29,7 @@ namespace gameengine {
 		this->eyex = eyex; this->eyey = eyey; this->eyez = eyez;
 		this->dirx = dirx; this->diry = diry; this->dirz = dirz;
 		this->upx = upx; this->upy = upy; this->upz = upz;
-
+		
 		anglePan = asin((1.0 * dirx + 0.0 * diry + 0.0 * dirz) / (sqrt(1.0 * 1.0 + 0.0 * 0.0 + 0.0 * 0.0)*sqrt(dirx*dirx + diry*diry + dirz*dirz)));
 		anglePan = anglePan * 180.0 / 3.14159265359;
 		std::cout << "anglePan=" << anglePan << '\n';
@@ -40,7 +40,7 @@ namespace gameengine {
 		// Assim, o produto vetorial será calculado por: n = PoPx(1,0,0) x PoPy(0,0,1)
 		// n = |PoPx| * |PoPy| * sen(Teta) = (0,1,0)
 		// O ângulo entre um vetor (dx,dy,dz) e a normal (0,1,0) é calculado por:
-		// alpha = asen((0*dx+1*dy+0*dz)/(sqrt(0*0+1*1+0*0)*(dx*dx+dY*dy+dz*dz))
+		// alpha = asen(abs(0*dx+1*dy+0*dz)/(abs(sqrt(0*0+1*1+0*0))*abs(dx*dx+dY*dy+dz*dz)))
 		angleTilt = asin(fabs(0.0 * dirx + 1.0 * diry + 0.0 * dirz) / (fabs(sqrt(0.0 * 0.0 + 1.0 * 1.0 + 0.0 * 0.0))*fabs(dirx*dirx + diry*diry + dirz*dirz)));
 		angleTilt = angleTilt * 180.0 / 3.14159265359;
 		std::cout << "angleTilt=" << angleTilt << '\n';

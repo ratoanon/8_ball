@@ -23,14 +23,14 @@
     <ClCompile Include="..\Game.cpp" />
     <ClCompile Include="..\main.cpp" />
     <ClCompile Include="..\MainWindow.cpp" />
-    <ClCompile Include="..\Table.cpp" />
+    <ClCompile Include="..\SnowMan.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Camera.h" />
     <ClInclude Include="..\Game.h" />
     <ClInclude Include="..\Game1.h" />
     <ClInclude Include="..\MainWindow.h" />
-    <ClInclude Include="..\Table.h" />
+    <ClInclude Include="..\SnowMan.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{EE6D219E-01A7-4DCD-AC32-26152D3C5A62}</ProjectGuid>

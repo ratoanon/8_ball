@@ -15,7 +15,7 @@ namespace gameengine {
 		int windowId;
 		Camera camera;
 		int x, y, screenWidth, screenHeight;
-
+		
 	private:
 		static int countWindows;
 		std::string windowName;
